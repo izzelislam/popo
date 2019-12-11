@@ -4,7 +4,7 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="AdminLTE-2.4.18/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="../AdminLTE-2.4.18/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p>Alexander Pierce</p>
@@ -27,25 +27,25 @@
         <li class="header">MENU UTAMA</li>
 
         <li class="active">
-          <a href="./index.php">
+          <a href="../index">
             <i class="fa fa-home"></i> <span>beranda</span>
           </a>
         </li>
         <li class="treeview">
-          <a href="index.php">
+          <a href="#">
             <i class="fa fa-book"></i> <span>Artikel</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-plus"></i> Tambah Post</a></li>
+            <li><a href="../post"><i class="fa fa-plus"></i> Tambah Post</a></li>
             <li><a href="#"><i class="fa fa-navicon"></i> Beranda Post</a></li>
           </ul>
         </li>
 
         <li>
-          <a href="./user">
+          <a href="../user">
             <i class="fa fa-user"></i> <span>user</span>
           </a>
         </li>

@@ -27,11 +27,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Beranda User
-        <small>Manajemen Data User</small>
+        Tambah Post
+        <small>Manajemen Data Post</small>
       </h1>
       <ol class="breadcrumb">
-        <li class="active"><a href="#"><i class="fa fa-user"></i> Beranda</a></li>
+        <li class="active"><a href="#"><i class="fa fa-plus"></i> Beranda</a></li>
       </ol>
     </section>
 
