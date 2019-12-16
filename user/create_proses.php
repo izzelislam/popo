@@ -4,7 +4,7 @@
 
 	$nama=$_POST['nama'];
 	$email=$_POST['email'];
-	$password=$_POST['password'];
+	$password=md5($_POST['password']);
 
 	$sql=" INSERT INTO users (name , email , password) VALUES ('$nama','$email','$password')";
 	$query=mysqli_query($koneksi,$sql);

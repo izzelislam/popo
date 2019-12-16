@@ -27,8 +27,8 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Tambah User
-        <small>Halaman tambah user</small>
+        Edit User
+        <small>Halaman edit user</small>
       </h1>
       <ol class="breadcrumb">
         <li class="active"><a href="../index"><i class="fa fa-home"></i> Beranda</a></li>
@@ -65,7 +65,7 @@
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Password</label>
-                  <input name="password" type="password" class="form-control" id="exampleInputPassword1" value="<?= $data['password'] ;?>">
+                  <input name="password" type="password" class="form-control" id="exampleInputPassword1" >
                 </div>
                 <!-- <div class="form-group">
                   <label for="exampleInputFile">File input</label>
