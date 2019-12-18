@@ -56,7 +56,7 @@
                   <td><?= $data['email']; ?></td>
                   <td>
                       <a href="edit.php?id=<?= $data['id'];?>" class="btn btn-sm btn-info">Edit</a>
-                      <a href="delete.php?id=<?= $data['id'];?>" data-toggle="modal" data-target="#modal-danger" class="btn btn-sm btn-danger" onclick="javascript:return confirm('apakah yakin menghapus data ini?')" class="btn btn-danger" >Hapus</a>
+                      <a href="delete.php?id=<?= $data['id'];?>"  class="btn btn-sm btn-danger" onclick="javascript:return confirm('apakah yakin menghapus data ini?')" class="btn btn-danger" >Hapus</a>
 
                   </td>
                </tr>

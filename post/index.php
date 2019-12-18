@@ -31,7 +31,9 @@
         <small>Manajemen Data Post</small>
       </h1>
       <ol class="breadcrumb">
-        <li class="active"><a href="#"><i class="fa fa-plus"></i> Beranda</a></li>
+        <li class="active"><a href="../index"><i class="fa fa-home"></i> Beranda</a></li>
+        <li class="active"><a href="http://localhost/master/popo/post"><i class="fa fa-user"></i> User</a></li>
+        <li class="active"><a href="http://localhost/master/popo/post/create.php"><i class="fa fa-plus"></i> Tambah user</a></li>
       </ol>
     </section>
 
@@ -41,55 +43,53 @@
       <!-- Default box -->
       <div class="box">
         <div class="box-header with-border">
-          <h3 class="box-title">Title</h3>
+           <a href="create.php" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i>Tambah</a>
           <div class="box-body">
               <table class="table table-bordered">
                 <tr>
-                  <th style="width: 10px">#</th>
-                  <th>Task</th>
-                  <th>Progress</th>
-                  <th style="width: 40px">Label</th>
+                  <th style="width: 10px">No</th>
+                  <th>Author</th>
+                  <th>Title</th>
+                  <th>content</th>
+                  <th style="width: 70px">Status</th>
+                  <th>Action</th>
                 </tr>
+                <?php 
+                    include "../config/koneksi.php";
+
+                    $sql  ="SELECT * FROM post";
+                    $query=mysqli_query($koneksi,$sql);
+                    $no=1;
+
+                    function status($status){
+                          if ($status==1) {
+                            return "Aktif";
+                          }else{
+                            return "Nonaktif";
+                          }
+                    }
+
+                    if (mysqli_num_rows($query)>0) {
+                      while ($data=mysqli_fetch_assoc($query)) {
+                        
+
+                 ?>
                 <tr>
-                  <td>1.</td>
-                  <td>Update software</td>
+                  <td style="width: 10px"><?= $no++;?></td>
+                  <td><?= $data['author'] ;?></td>
+                  <td><?= $data['title'] ;?></td>
+                  <td><?= $data['content'] ;?></td>
+                  <td style="width: 70px"><?= status($data['status']) ;?></td>
                   <td>
-                    <div class="progress progress-xs">
-                      <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
-                    </div>
+                     <a href="edit.php?id=<?= $data['id'];?>" class="btn btn-sm btn-info">Edit</a>
+                     <a href="delete.php?id=<?= $data['id'];?>"  class="btn btn-sm btn-danger" onclick="javascript:return confirm('apakah yakin menghapus data ini?')" class="btn btn-danger" >Hapus</a>
+
                   </td>
-                  <td><span class="badge bg-red">55%</span></td>
                 </tr>
-                <tr>
-                  <td>2.</td>
-                  <td>Clean database</td>
-                  <td>
-                    <div class="progress progress-xs">
-                      <div class="progress-bar progress-bar-yellow" style="width: 70%"></div>
-                    </div>
-                  </td>
-                  <td><span class="badge bg-yellow">70%</span></td>
-                </tr>
-                <tr>
-                  <td>3.</td>
-                  <td>Cron job running</td>
-                  <td>
-                    <div class="progress progress-xs progress-striped active">
-                      <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
-                    </div>
-                  </td>
-                  <td><span class="badge bg-light-blue">30%</span></td>
-                </tr>
-                <tr>
-                  <td>4.</td>
-                  <td>Fix and squish bugs</td>
-                  <td>
-                    <div class="progress progress-xs progress-striped active">
-                      <div class="progress-bar progress-bar-success" style="width: 90%"></div>
-                    </div>
-                  </td>
-                  <td><span class="badge bg-green">90%</span></td>
-                </tr>
+                <?php 
+                      }
+                    }
+                 ?>
               </table>
             </div>
             <!-- /.box-body -->

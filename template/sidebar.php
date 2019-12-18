@@ -39,8 +39,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="../post"><i class="fa fa-plus"></i> Tambah Post</a></li>
-            <li><a href="#"><i class="fa fa-navicon"></i> Beranda Post</a></li>
+            <li><a href="../post/create.php"><i class="fa fa-plus"></i> Tambah Post</a></li>
+            <li><a href="../post"><i class="fa fa-navicon"></i> Beranda Post</a></li>
           </ul>
         </li>
 
