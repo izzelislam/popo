@@ -55,7 +55,8 @@
                 </div>
                 <div class="form-group">
                   <label>Content</label>
-                  <textarea name="content" class="form-control" rows="3" placeholder="Enter ..."></textarea>
+                   <textarea id="editor1" name="editor1" rows="10" cols="80">
+                    </textarea>
                 </div>
                  <div class="form-group">
                   <label>Select</label>
@@ -88,7 +89,8 @@
         <!-- /.box-footer-->
       </div>
       <!-- /.box -->
-
+      
+        
     </section>
     <!-- /.content -->
   </div>
@@ -103,6 +105,29 @@
 <?php 
     include "../template/scriipt.php";
  ?>
+
+      <script src="http://localhost/master/popo/AdminLTE-2.4.18/bower_components/jquery/dist/jquery.min.js"></script>
+      <!-- Bootstrap 3.3.7 -->
+      <script src="http://localhost/master/popo/AdminLTE-2.4.18/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+      <!-- FastClick -->
+      <script src="http://localhost/master/popo/AdminLTE-2.4.18/bower_components/fastclick/lib/fastclick.js"></script>
+      <!-- AdminLTE App -->
+      <script src="http://localhost/master/popo/AdminLTE-2.4.18/dist/js/adminlte.min.js"></script>
+      <!-- AdminLTE for demo purposes -->
+      <script src="http://localhost/master/popo/AdminLTE-2.4.18/dist/js/demo.js"></script>
+      <!-- CK Editor -->
+      <script src="http://localhost/master/popo/AdminLTE-2.4.18/bower_components/ckeditor/ckeditor.js"></script>
+      <!-- Bootstrap WYSIHTML5 -->
+      <script src="http://localhost/master/popo/AdminLTE-2.4.18/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+      <script>
+        $(function () {
+          // Replace the <textarea id="editor1"> with a CKEditor
+          // instance, using default configuration.
+          CKEDITOR.replace('editor1')
+          //bootstrap WYSIHTML5 - text editor
+          $('.textarea').wysihtml5()
+        })
+      </script>
 
 </body>
 </html>
